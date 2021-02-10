@@ -1,0 +1,676 @@
+@charset "UTF-8";
+* {
+  font-family: 'oswald', sans-serif; }
+
+body {
+  overflow-x: hidden; }
+
+/* ####   EFECTOS GENERALES ####   */
+/* ####   TEXTOS Y TITULOS   ####   */
+.texto1Index .texto1Index__parrafo, .texto2Index .texto2Index__parrafo, .texto1Nosotros .texto1Nosotros__parrafo, .bannerPlantacion .bannerPlantacion__texto, .texto3Nosotros .texto3Nosotros__parrafo, .texto4Nosotros .texto4Nosotros__parrafo, .contacto .card .formulario .formulario__texto, .contacto .card .formulario input, .contacto .card .formulario textarea, .contacto .card .formulario select, .contacto .card .formulario option, .contacto .card .info .info__subtitulo {
+  font-family: 'montserrat', sans-serif;
+  font-size: 18px;
+  color: #131313; }
+
+.texto2Nosotros .texto2Nosotros__parrafo {
+  font-family: 'montserrat', sans-serif;
+  font-size: 16px;
+  color: #131313; }
+
+.texto1Nosotros .texto1Nosotros__titulo, .bannerPlantacion .bannerPlantacion__titulo, .texto3Nosotros .texto3Nosotros__titulo, .texto4Nosotros .texto4Nosotros__titulo, .grid-sucursales .sucursal .sucursal__texto .sucursal__titulo, .tienda .tienda__texto .tienda__titulo, .contacto .card .formulario .formulario__titulo, .contacto .card .info .info__titulo {
+  font-size: 2.5rem;
+  color: #4d3127;
+  font-weight: 700; }
+
+.headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo, .carousel-item .carousel-item__contenedorTexto .carousel-item__texto, .bannerColombia .bannerColombia__titulo, .bannerMenu .bannerMenu__titulo, .bannerSucursales .bannerSucursales__titulo, .tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__contenedorTitulo .tiendaFoto--sanTelmo__titulo, .bannerContacto .bannerContacto__titulo {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+strong {
+  font-family: 'montserrat', sans-serif; }
+
+strong.MC {
+  font-family: 'montserrat', sans-serif;
+  color: #4d3127; }
+
+/* ####   DECORACION DE TEXTOS   ####   */
+.subrayado1::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 0px;
+  bottom: -5px;
+  left: 25%;
+  border-bottom: 3px solid #4d3127; }
+
+.subrayado2::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 0px;
+  bottom: -5px;
+  left: 25%;
+  border-bottom: 3px solid #fff; }
+
+/* ####   BANNER   ####   */
+.bannerPlanta, .bannerColombia, .bannerPlantacion, .bannerMenu, .bannerSucursales, .bannerContacto, .contacto {
+  height: 400px;
+  background-size: cover;
+  background-position-x: center; }
+
+/* ####   BOTONES PROPIOS   ####   */
+.btn-coffee, .btn-coffee--white {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 10px 17px;
+  border: 2px #b0967c solid;
+  border-radius: .25rem;
+  background-color: #b0967c;
+  text-align: center;
+  transition: all .4s ease-in-out; }
+
+.btn-coffee:hover, .btn-coffee--white:hover {
+  background-color: #b0967c80;
+  text-decoration: none;
+  color: #fff; }
+
+.btn-coffee--white:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #b0967c;
+  text-decoration: none; }
+
+/* ####   NAVBAR   #### */
+nav a.navbar-brand {
+  color: #794c3c !important;
+  font-weight: 700; }
+
+nav a.nav-link {
+  color: #794c3c !important;
+  font-weight: 600;
+  margin-left: 15px; }
+
+nav a.hover-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #794c3c;
+  transition: width .3s; }
+
+nav a.hover-link:hover::after {
+  width: 100%;
+  transition: width .3s; }
+
+nav a.link-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #8a0202; }
+
+/* ####   FOOTER   #### */
+.footer {
+  background-color: #4d3127; }
+  .footer .footer__titulo {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 700; }
+  .footer .footer__subtitulo {
+    font-family: 'monsterrat', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 3.1px;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 100;
+    line-height: 1px; }
+  .footer .footer__texto {
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 400; }
+  .footer .footer__links ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column; }
+    @media (max-width: 767px) {
+      .footer .footer__links ul {
+        flex-direction: row; } }
+    .footer .footer__links ul li {
+      list-style: none;
+      text-align: center; }
+      .footer .footer__links ul li a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-right: 10px;
+        color: rgba(0, 0, 0, 0.65); }
+      .footer .footer__links ul li a:hover {
+        text-decoration: line-through; }
+  .footer .footer__iconos ul {
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center; }
+    .footer .footer__iconos ul li {
+      position: relative;
+      list-style: none;
+      margin: 0 20px;
+      cursor: pointer; }
+      .footer .footer__iconos ul li a {
+        text-decoration: none; }
+        .footer .footer__iconos ul li a .fab {
+          font-size: 50px;
+          color: rgba(0, 0, 0, 0.65);
+          transition: .7s ease-out; }
+        .footer .footer__iconos ul li a .fab:hover {
+          font-size: 50px;
+          color: rgba(0, 0, 0, 0.65);
+          color: rgba(0, 0, 0, 0.1); }
+    .footer .footer__iconos ul li::before {
+      font-family: fontAwesome;
+      pointer-events: none;
+      position: absolute;
+      top: -12.5px;
+      left: 0;
+      font-size: 50px;
+      height: 0%;
+      overflow: hidden;
+      transition: .7s ease-out;
+      height: 0%; }
+    .footer .footer__iconos ul .twitter::before {
+      content: '\f099';
+      color: #1DA1F2; }
+    .footer .footer__iconos ul .facebook::before {
+      content: '\f082';
+      color: #3b5998; }
+    .footer .footer__iconos ul .instagram::before {
+      content: '\f16d';
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    .footer .footer__iconos ul .whatsapp::before {
+      content: '\f232';
+      color: #4FCE5D; }
+    .footer .footer__iconos ul li:hover::before {
+      height: 130%; }
+
+/* ####   INDEX   #### */
+/* ####   HEADER VIDEO   #### */
+.headerVideo {
+  position: relative;
+  background-color: black;
+  height: 51vh;
+  min-height: 25rem;
+  overflow: hidden; }
+  .headerVideo video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+  .headerVideo .headerVideo__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(39, 37, 37, 0.75), black);
+    z-index: 1; }
+  .headerVideo .headerVideo__contenedorTitulo {
+    position: relative;
+    z-index: 2; }
+    .headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo {
+      font-size: 20vh;
+      font-weight: 500; }
+      @media (max-width: 992px) {
+        .headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo {
+          font-size: 19vh; } }
+      @media (max-width: 767px) {
+        .headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo {
+          font-size: 16.5vh; } }
+      @media (max-width: 576px) {
+        .headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo {
+          font-size: 14.8vh; } }
+
+/* ####   TEXTOS 1 INDEX   #### */
+.texto1Index .texto1Index__titulo .texto1Index__tituloSuperior {
+  color: #4d3127;
+  font-size: 2.7rem;
+  font-weight: 200;
+  line-height: 0%;
+  position: relative;
+  z-index: 2; }
+
+.texto1Index .texto1Index__titulo .texto1Index__tituloInferior {
+  color: #794c3c;
+  font-weight: 700;
+  font-size: 7rem;
+  line-height: 50%;
+  position: relative;
+  z-index: 1; }
+
+/* ####   BANNER PLANTA    #### */
+.bannerPlanta {
+  background-image: url(../media/fotoPlanta.jpg);
+  background-attachment: fixed;
+  height: 300px; }
+
+/* ####   TEXTOS 1 INDEX   #### */
+.texto2Index .texto2Index__titulo .texto2Index__tituloSuperior {
+  color: #4d3127;
+  font-size: 3.2rem;
+  font-weight: 200;
+  line-height: 0%;
+  position: relative;
+  z-index: 2; }
+
+.texto2Index .texto2Index__titulo .texto2Index__tituloInferior {
+  color: #794c3c;
+  font-weight: 700;
+  font-size: 4.6rem;
+  line-height: 40%;
+  position: relative;
+  z-index: 1; }
+
+/* ####   NOSOTROS #### */
+.carousel-item .carousel-item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), black);
+  z-index: 0; }
+
+.carousel-item .carousel-item__contenedorTexto {
+  position: absolute;
+  z-index: 1; }
+  .carousel-item .carousel-item__contenedorTexto .carousel-item__texto {
+    font-size: 16.5vh; }
+    @media (max-width: 992px) {
+      .carousel-item .carousel-item__contenedorTexto .carousel-item__texto {
+        font-size: 13vh; } }
+    @media (max-width: 767px) {
+      .carousel-item .carousel-item__contenedorTexto .carousel-item__texto {
+        font-size: 9.1vh; } }
+    @media (max-width: 576px) {
+      .carousel-item .carousel-item__contenedorTexto .carousel-item__texto {
+        font-size: 8vh; } }
+
+/* ####   NOSOTROS #### */
+/* ####   BANNER COLOMBIA #### */
+.bannerColombia {
+  height: 350px;
+  background-attachment: scroll;
+  background-image: url(../media/colombia.jpg); }
+  .bannerColombia .bannerColombia__titulo {
+    font-size: 20vh;
+    font-weight: 500; }
+    @media (max-width: 767px) {
+      .bannerColombia .bannerColombia__titulo {
+        font-size: 17vh; } }
+
+/* ####   TEXTOS 1 NOSOTROS   #### */
+.texto1Nosotros .texto1Nosotros__titulo {
+  position: relative; }
+
+/* ####   TEXTOS 2 NOSOTROS   #### */
+.texto2Nosotros .texto2Nosotros__titulo {
+  position: relative;
+  font-size: 2rem;
+  color: #4d3127;
+  font-weight: 400; }
+  @media screen and (max-width: 767px) {
+    .texto2Nosotros .texto2Nosotros__titulo {
+      font-size: 2.5rem;
+      color: #4d3127;
+      font-weight: 700;
+      text-transform: uppercase; } }
+
+.texto2Nosotros .subrayado1::after {
+  display: none; }
+  @media screen and (max-width: 767px) {
+    .texto2Nosotros .subrayado1::after {
+      display: block; } }
+
+@media screen and (max-width: 767px) {
+  .texto2Nosotros .texto2Nosotros__parrafo {
+    font-size: 18px;
+    color: #131313; } }
+
+/* #### BANNER PLANTACION #### */
+.bannerPlantacion {
+  background-image: linear-gradient(180deg, rgba(39, 37, 37, 0.75), black), url(../media/plantacion.jpg);
+  background-attachment: fixed;
+  background-position-x: center;
+  height: 300px; }
+  .bannerPlantacion .bannerPlantacion__titulo {
+    color: #fff; }
+  .bannerPlantacion .bannerPlantacion__texto {
+    color: #fff; }
+
+/* ####   TEXTOS 3 NOSOTROS   #### */
+.texto3Nosotros .texto3Nosotros__titulo {
+  position: relative; }
+
+/* ####   TEXTOS 4 NOSOTROS   #### */
+.texto4Nosotros .texto4Nosotros__titulo {
+  position: relative; }
+
+/* ####   ICONOS   #### */
+.listaIconos {
+  background-color: #794c3c;
+  color: #fff; }
+  .listaIconos .listaIconos__img {
+    width: 100px;
+    height: 100px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(345deg) brightness(104%) contrast(102%); }
+  .listaIconos .listaIconos__titulo {
+    position: relative;
+    font-size: 2.2rem; }
+  .listaIconos .listaIconos__texto {
+    font-size: 1.1rem;
+    font-family: 'monsterrat', sans-serif; }
+
+/* ####   MENÚ #### */
+/* ####   BANNER MENÚ #### */
+.bannerMenu {
+  height: 400px;
+  background-image: linear-gradient(180deg, rgba(39, 37, 37, 0.75), black), url(../media/cafeMedialuna.jpg); }
+  .bannerMenu .bannerMenu__titulo {
+    font-size: 18vh; }
+
+/* ####   OPCIONES MENÚ   #### */
+#opciones-menu .opciones-menu__button {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 5px 9px;
+  font-weight: 700;
+  color: #4d3127;
+  border: none;
+  background-color: Transparent; }
+
+#opciones-menu .opciones-menu__subrayado::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #794c3c;
+  transition: width .3s; }
+
+#opciones-menu .opciones-menu__subrayado:hover::after {
+  width: 100%;
+  transition: width .3s; }
+
+#opciones-menu .opciones-menu__active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #8a0202; }
+
+.menu-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  background: #fff;
+  padding: 20px;
+  overflow: hidden; }
+  .menu-grid .plato {
+    height: 380px;
+    background: #f7f7f7;
+    border: 0.2px solid #dbdbdb;
+    border-radius: 5%;
+    padding: 2px;
+    transition: all .7s;
+    display: none; }
+    .menu-grid .plato .plato__img {
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 10px;
+      width: 100%;
+      height: 80%;
+      border-radius: 5% 5% 0 0; }
+    .menu-grid .plato .plato__img--espresso {
+      background-image: url(../media/menu/espresso.jpg); }
+    .menu-grid .plato .plato__img--coca {
+      background-image: url(../media/menu/coca.jpg); }
+    .menu-grid .plato .plato__img--agua {
+      background-image: url(../media/menu/agua.jpg); }
+    .menu-grid .plato .plato__img--corona {
+      background-image: url(../media/menu/corona.jpg); }
+    .menu-grid .plato .plato__img--americano {
+      background-image: url(../media/menu/americano.jpg); }
+    .menu-grid .plato .plato__img--cortado {
+      background-image: url(../media/menu/cortado.jpg); }
+    .menu-grid .plato .plato__img--capuccino {
+      background-image: url(../media/menu/capuccino.jpg); }
+    .menu-grid .plato .plato__img--te {
+      background-image: url(../media/menu/te.jpg); }
+    .menu-grid .plato .plato__img--jugo {
+      background-image: url(../media/menu/jugo.jpg); }
+    .menu-grid .plato .plato__img--brownie {
+      background-image: url(../media/menu/brownie.jpg); }
+    .menu-grid .plato .plato__img--budin {
+      background-image: url(../media/menu/budin.jpg); }
+    .menu-grid .plato .plato__img--cookie {
+      background-image: url(../media/menu/cookie.jpg); }
+    .menu-grid .plato .plato__img--medialuna {
+      background-image: url(../media/menu/medialuna.jpg); }
+    .menu-grid .plato .plato__img--tostado {
+      background-image: url(../media/menu/tostado.jpg); }
+    .menu-grid .plato .plato__texto {
+      height: 20%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      text-align: center;
+      color: #4d3127; }
+      .menu-grid .plato .plato__texto h3 {
+        font-size: 1.5rem;
+        font-weight: 500; }
+      .menu-grid .plato .plato__texto p {
+        font-size: 1rem;
+        font-weight: 300;
+        font-family: "monsterrat", sans-serif; }
+  .menu-grid .plato:hover {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+    -o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px; }
+  .menu-grid .show {
+    display: block; }
+
+/* ####   BANNER SUCURSALES #### */
+.bannerSucursales {
+  background-image: linear-gradient(180deg, rgba(39, 37, 37, 0.75), black), url(../media/cafeMapa.jpg); }
+  .bannerSucursales .bannerSucursales__titulo {
+    font-size: 19vh; }
+    @media (max-width: 767px) {
+      .bannerSucursales .bannerSucursales__titulo {
+        font-size: 15.5vh; } }
+
+/* ####   LISTA SUCURSALES   #### */
+.grid-sucursales {
+  display: grid;
+  gap: 15px;
+  padding: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr)); }
+  .grid-sucursales .sucursal {
+    position: relative;
+    height: 750px;
+    background: #f7f7f7;
+    padding: 2px; }
+    .grid-sucursales .sucursal .sucursal__img {
+      width: 100%;
+      height: 40%;
+      background-size: cover;
+      background-position: center; }
+    .grid-sucursales .sucursal .sucursal__img--martinez {
+      background-image: url(../media/fotoSucursales/martinez.jpg); }
+    .grid-sucursales .sucursal .sucursal__img--segundo {
+      background-image: url(../media/fotoSucursales/segundoFernandez.jpg); }
+    .grid-sucursales .sucursal .sucursal__img--vicente {
+      background-image: url(../media/fotoSucursales/vicenteLopez.jpg); }
+    .grid-sucursales .sucursal .sucursal__img--palermo {
+      background-image: url(../media/fotoSucursales/palermo.jpg); }
+    .grid-sucursales .sucursal .sucursal__img--tigre {
+      background-image: url(../media/fotoSucursales/tigre.jpg); }
+    .grid-sucursales .sucursal .sucursal__img--sanTelmo {
+      background-image: linear-gradient(180deg, rgba(39, 37, 37, 0.75), black), url(../media/fotoSucursales/sanTelmo.jpg); }
+    .grid-sucursales .sucursal .sucursal__img--montserrat {
+      background-image: url(../media/fotoSucursales/montserrat.jpg); }
+    .grid-sucursales .sucursal .sucursal__img--adrogue {
+      background-image: url(../media/fotoSucursales/adrogue.jpg); }
+    .grid-sucursales .sucursal .sucursal__texto {
+      width: 100%;
+      height: 50%; }
+      .grid-sucursales .sucursal .sucursal__texto .sucursal__titulo {
+        text-transform: uppercase; }
+      .grid-sucursales .sucursal .sucursal__texto .sucursal__iconos {
+        width: 75px; }
+        .grid-sucursales .sucursal .sucursal__texto .sucursal__iconos span {
+          color: #b0967c;
+          font-size: 40px;
+          width: 100px;
+          text-align: center; }
+      .grid-sucursales .sucursal .sucursal__texto .sucursal__info {
+        font-family: 'montserrat', sans-serif;
+        color: #794c3c;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 0; }
+    .grid-sucursales .sucursal .proximamente {
+      position: absolute;
+      color: #fff;
+      width: 70%;
+      text-align: end;
+      font-size: 30px;
+      font-weight: 500;
+      padding-right: 10px;
+      background-color: #8a0202; }
+
+/* ####   PAGINA SUCURSAL   #### */
+.tienda {
+  width: 100%; }
+  .tienda .tienda__texto {
+    width: 100%; }
+    .tienda .tienda__texto .tienda__titulo {
+      text-transform: uppercase; }
+    .tienda .tienda__texto .tienda__icono {
+      width: 75px; }
+      .tienda .tienda__texto .tienda__icono span {
+        color: #b0967c;
+        font-size: 40px;
+        width: 100px;
+        text-align: center; }
+    .tienda .tienda__texto .tienda__info {
+      font-family: 'montserrat', sans-serif;
+      color: #794c3c;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 0; }
+
+.tiendaFoto {
+  /*MANTENER ALTURA FIJA EN MD*/ }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .tiendaFoto {
+      width: 100%;
+      overflow: hidden; }
+      .tiendaFoto .img-fluid {
+        width: auto;
+        max-width: none;
+        height: 410px; } }
+
+.tiendaFoto--segundo {
+  /*MANTENER ALTURA FIJA EN MD*/ }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .tiendaFoto--segundo .img-fluid {
+      height: 485px; } }
+
+.tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__lightbox {
+  width: 100%; }
+
+.tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), black);
+  z-index: 1; }
+
+.tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__contenedorTitulo {
+  position: absolute;
+  z-index: 2; }
+  .tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__contenedorTitulo .tiendaFoto--sanTelmo__titulo {
+    font-size: 14.5vh;
+    font-weight: 500; }
+    @media (max-width: 991px) {
+      .tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__contenedorTitulo .tiendaFoto--sanTelmo__titulo {
+        font-size: 12vh; } }
+
+.map {
+  height: 70vh; }
+
+/* ####   BANNER CONTACTO #### */
+.bannerContacto {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../media/cafeBarra.jpg); }
+  .bannerContacto .bannerContacto__titulo {
+    font-size: 19vh; }
+
+/* ####  FORMUARIO E INFO #### */
+.contacto {
+  background-image: linear-gradient(rgba(47, 23, 15, 0.85), rgba(47, 23, 15, 0.85)), url(../media/granos.jpg);
+  height: auto; }
+  .contacto .card {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); }
+    .contacto .card .formulario input, .contacto .card .formulario textarea {
+      background-color: rgba(255, 255, 255, 0.3); }
+    .contacto .card .formulario input:focus, .contacto .card .formulario textarea:focus {
+      border-color: #cacaca;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(207, 207, 207, 0.7); }
+    .contacto .card .formulario select, .contacto .card .formulario option {
+      color: #495057;
+      background-color: rgba(255, 255, 255, 0.3); }
+    .contacto .card .formulario select:focus {
+      border-color: #cacaca;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(207, 207, 207, 0.7); }
+    .contacto .card .info .info__icono {
+      width: 75px; }
+      .contacto .card .info .info__icono span {
+        color: #4d3127;
+        font-size: 40px;
+        width: 100px;
+        text-align: center; }
+    .contacto .card .info .info__texto {
+      font-family: 'montserrat', sans-serif;
+      color: #4d3127;
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin: 0px 0px 0px 10px; }
+
+.infoMapContainer {
+  padding: 10px;
+  width: 100%;
+  height: 50vh; }
+  .infoMapContainer iframe {
+    opacity: 50%;
+    border-radius: .25rem;
+    transition: all .5s; }
+  .infoMapContainer iframe:hover {
+    opacity: 100%;
+    border-radius: .25rem; }

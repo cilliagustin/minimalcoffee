@@ -1,0 +1,858 @@
+@import "colores";
+*{
+    font-family: 'oswald', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+/* ####   EFECTOS GENERALES ####   */
+/* ####   TEXTOS Y TITULOS   ####   */
+%textoDescriptivo1{
+    font-family: 'montserrat', sans-serif;
+    font-size: 18px;
+    color: $gris;
+}
+%textoDescriptivo2{
+    font-family: 'montserrat', sans-serif;
+    font-size: 16px;
+    color: $gris;
+}
+%titulo1{
+    font-size: 2.5rem;
+    color: $marron1;
+    font-weight: 700;
+}
+%tituloBanner{
+    background: $blancoTranslucido;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+strong{
+    font-family:'montserrat', sans-serif;
+}
+strong.MC{
+    font-family:'montserrat', sans-serif;
+    color: $marron1;
+}
+/* ####   DECORACION DE TEXTOS   ####   */
+.subrayado1::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 0px;
+    bottom: -5px;
+    left: 25%;
+    border-bottom: 3px solid $marron1;
+}
+.subrayado2::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 0px;
+    bottom: -5px;
+    left: 25%;
+    border-bottom: 3px solid #fff;
+}
+/* ####   BANNER   ####   */
+%banner{
+    height: 400px;
+    background-size: cover;
+    background-position-x: center;
+}
+/* ####   BOTONES PROPIOS   ####   */
+.btn-coffee{
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 10px 17px;
+    border: 2px $marron3 solid;
+    border-radius: .25rem;
+    background-color: $marron3;
+    text-align: center;
+    transition: all .4s ease-in-out;
+}
+.btn-coffee:hover{
+    background-color: #b0967c80;
+    text-decoration: none;
+    color: #fff;
+}
+.btn-coffee--white{
+    @extend .btn-coffee;
+}
+.btn-coffee--white:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: $marron3;
+    text-decoration: none;
+}
+/* ####   NAVBAR   #### */
+nav{
+    a.navbar-brand{
+        color: $marron2!important;
+        font-weight: 700;
+    }
+    a.nav-link{
+        color: $marron2!important;
+        font-weight: 600;
+        margin-left: 15px;
+    }
+    a.hover-link::after{
+        content:'';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $marron2;
+        transition: width .3s;
+    }
+    a.hover-link:hover::after{
+        width: 100%;
+        transition: width .3s;
+    }
+    a.link-active::after{
+        content:'';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background:$rojo;
+    }
+}
+/* ####   FOOTER   #### */
+.footer{
+    background-color: $marron1;
+    .footer__titulo{
+        font-size: 2rem;
+        color: $negroTranslucido;
+        font-weight: 700;
+    }
+    .footer__subtitulo{
+        font-family: 'monsterrat', sans-serif;
+        font-size: 1.3rem;
+        letter-spacing: 3.1px;
+        color: $negroTranslucido;
+        font-weight: 100;
+        line-height: 1px;
+    }
+    .footer__texto{
+        font-size: 1.4rem;
+        color: $negroTranslucido;
+        font-weight: 400;
+    }
+    .footer__links{
+        ul{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            @media (max-width: 767px){
+                flex-direction: row;
+            }
+            li{
+                list-style: none;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    margin-right: 10px;
+                    color: $negroTranslucido;
+                }
+                a:hover{
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+    .footer__iconos{
+        ul{
+            padding: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            li{
+                position: relative;
+                list-style: none;
+                margin: 0 20px;
+                cursor: pointer;
+                a{
+                    text-decoration: none;
+                    .fab{
+                        font-size: 50px;
+                        color: $negroTranslucido;
+                        transition: .7s ease-out;
+                    }
+                    .fab:hover{
+                        font-size: 50px;
+                        color: $negroTranslucido;
+                        color: rgba(0, 0, 0, 0.1);
+                    }
+                }
+                
+            }
+            li::before{
+                font-family: fontAwesome;
+                pointer-events: none;
+                position: absolute;
+                top: -12.5px;
+                left: 0;
+                font-size: 50px;
+                height: 0%;
+                overflow: hidden;
+                transition: .7s ease-out;
+                height: 0%
+            }
+            .twitter::before{
+                content:'\f099';
+                color: #1DA1F2;
+            }
+            .facebook::before{
+                content:'\f082';
+                color: #3b5998;
+            }
+            .instagram::before{
+                content:'\f16d';
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .whatsapp::before{
+                content:'\f232';
+                color: #4FCE5D;
+            }
+            li:hover::before{
+                height: 130%;
+            }
+        }
+    }
+    
+
+}
+/* ####   INDEX   #### */
+/* ####   HEADER VIDEO   #### */
+.headerVideo {
+    position: relative;
+    background-color: black;
+    height: 51vh;
+    min-height: 25rem;
+    overflow: hidden;
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .headerVideo__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $gradiente1;
+        z-index: 1;
+    }
+    .headerVideo__contenedorTitulo{
+        position: relative;
+        z-index: 2;
+        .headerVideo__titulo{
+            @extend %tituloBanner;
+            font-size: 20vh;
+            font-weight: 500;
+            @media (max-width: 992px){
+                font-size: 19vh;
+            }
+            @media (max-width: 767px){
+                font-size: 16.5vh;
+            }
+            @media (max-width: 576px){
+                font-size: 14.8vh;
+            }
+        }
+    }
+}
+/* ####   TEXTOS 1 INDEX   #### */
+.texto1Index{
+    .texto1Index__titulo{
+        .texto1Index__tituloSuperior{
+            color: $marron1;
+            font-size: 2.7rem;
+            font-weight: 200;
+            line-height: 0%;
+            position: relative;
+            z-index: 2;
+        }
+        .texto1Index__tituloInferior{
+            color: $marron2;
+            font-weight: 700;
+            font-size: 7rem;
+            line-height: 50%;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .texto1Index__parrafo{
+        @extend %textoDescriptivo1;
+    }
+}
+/* ####   BANNER PLANTA    #### */
+.bannerPlanta{
+    @extend %banner;
+    background-image: url(../media/fotoPlanta.jpg);
+    background-attachment: fixed;
+    height: 300px;
+}
+/* ####   TEXTOS 1 INDEX   #### */
+.texto2Index{
+    .texto2Index__titulo{
+        .texto2Index__tituloSuperior{
+            color: $marron1;
+            font-size: 3.2rem;
+            font-weight: 200;
+            line-height: 0%;
+            position: relative;
+            z-index: 2;
+        }
+        .texto2Index__tituloInferior{
+            color: $marron2;
+            font-weight: 700;
+            font-size: 4.6rem;
+            line-height: 40%;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .texto2Index__parrafo{
+        @extend %textoDescriptivo1;
+    }
+}
+/* ####   NOSOTROS #### */
+.carousel-item{
+    .carousel-item__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $gradiente2;
+        z-index: 0;
+    }
+    .carousel-item__contenedorTexto{
+        position: absolute;
+        z-index: 1;
+        .carousel-item__texto{
+            @extend %tituloBanner;
+            font-size: 16.5vh;
+            @media (max-width: 992px){
+                font-size: 13vh;
+            }
+            @media (max-width: 767px){
+                font-size: 9.1vh;
+            }
+            @media (max-width: 576px){
+                font-size: 8vh;
+            }
+        }
+    }
+}
+/* ####   NOSOTROS #### */
+/* ####   BANNER COLOMBIA #### */
+.bannerColombia{
+    @extend %banner;
+    height: 350px;
+    background-attachment: scroll;
+    background-image: url(../media/colombia.jpg);
+    .bannerColombia__titulo{
+        @extend %tituloBanner;
+        font-size: 20vh;
+        font-weight: 500;
+        @media (max-width: 767px){
+            font-size: 17vh;
+        }
+    }
+}
+/* ####   TEXTOS 1 NOSOTROS   #### */
+.texto1Nosotros{
+    .texto1Nosotros__titulo{
+        @extend %titulo1;
+        position: relative;
+    }
+    .texto1Nosotros__parrafo{
+        @extend %textoDescriptivo1;
+    }
+}
+/* ####   TEXTOS 2 NOSOTROS   #### */
+.texto2Nosotros{
+    .texto2Nosotros__titulo{
+        position: relative;
+        font-size: 2rem;
+        color: $marron1;
+        font-weight: 400;
+        @media screen and (max-width: 767px){
+            font-size: 2.5rem;
+            color: $marron1;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+    .subrayado1::after{
+        display: none;
+        @media screen and (max-width: 767px){
+            display: block;
+        }
+    }
+    .texto2Nosotros__parrafo{
+        @extend %textoDescriptivo2;
+        @media screen and (max-width: 767px){
+            font-size: 18px;
+            color: $gris;
+        }
+    }
+}
+/* #### BANNER PLANTACION #### */
+.bannerPlantacion{
+    @extend %banner;
+    background-image:$gradiente1, url(../media/plantacion.jpg);
+    background-attachment: fixed;
+    background-position-x: center;
+    height: 300px;
+    .bannerPlantacion__titulo{
+        @extend %titulo1;
+        color: #fff;
+    }
+    .bannerPlantacion__texto{
+        @extend %textoDescriptivo1;
+        color: #fff;
+    }
+}
+/* ####   TEXTOS 3 NOSOTROS   #### */
+.texto3Nosotros{
+    .texto3Nosotros__titulo{
+        @extend %titulo1;
+        position: relative;
+    }
+    .texto3Nosotros__parrafo{
+        @extend %textoDescriptivo1;
+    }
+}
+/* ####   TEXTOS 4 NOSOTROS   #### */
+.texto4Nosotros{
+    .texto4Nosotros__titulo{
+        @extend %titulo1;
+        position: relative;
+    }
+    .texto4Nosotros__parrafo{
+        @extend %textoDescriptivo1;
+    }
+}
+/* ####   ICONOS   #### */
+.listaIconos{
+    background-color: $marron2;
+    color: #fff;
+    .listaIconos__img{
+        width: 100px;
+        height: 100px;
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(345deg) brightness(104%) contrast(102%);
+    }
+    .listaIconos__titulo{
+        position: relative;
+        font-size: 2.2rem;
+    }
+    .listaIconos__texto{
+        font-size: 1.1rem;
+        font-family: 'monsterrat', sans-serif;
+    }
+}
+/* ####   MENÚ #### */
+/* ####   BANNER MENÚ #### */
+.bannerMenu{
+    @extend %banner;
+    height: 400px;
+    background-image:$gradiente1, url(../media/cafeMedialuna.jpg);
+    .bannerMenu__titulo{
+        @extend %tituloBanner;
+        font-size: 18vh;
+    }
+}
+/* ####   OPCIONES MENÚ   #### */
+#opciones-menu{
+    .opciones-menu__button{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin: 5px 9px;
+        font-weight: 700;
+        color: $marron1;
+        border: none;
+        background-color: Transparent;
+    }
+    .opciones-menu__subrayado::after{
+        content:'';
+        display: block;
+        width: 0;
+        height: 4px;
+        background: $marron2;
+        transition: width .3s;
+    }
+    .opciones-menu__subrayado:hover::after{
+        width: 100%;
+        transition: width .3s;
+    }
+    .opciones-menu__active::after{
+        content:'';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background:$rojo;
+    }
+}
+// ####   PLATOS   ####
+.menu-grid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    background: #fff;
+    padding: 20px;
+    overflow: hidden;
+    .plato{
+        height: 380px;
+        background: #f7f7f7;
+        border: .2px solid rgb(219, 219, 219);
+        border-radius: 5%;
+        padding: 2px;
+        transition: all .7s;
+        display:none;
+        .plato__img{
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 80%;
+            border-radius: 5% 5% 0 0;
+        }
+        .plato__img--espresso{
+            background-image: url(../media/menu/espresso.jpg);
+        }
+        .plato__img--coca{
+            background-image: url(../media/menu/coca.jpg);
+        }
+        .plato__img--agua{
+            background-image: url(../media/menu/agua.jpg);
+        }
+        .plato__img--corona{
+            background-image: url(../media/menu/corona.jpg);
+        }
+        .plato__img--americano{
+            background-image: url(../media/menu/americano.jpg);
+        }
+        .plato__img--cortado{
+            background-image: url(../media/menu/cortado.jpg);
+        }
+        .plato__img--capuccino{
+            background-image: url(../media/menu/capuccino.jpg);
+        }
+        .plato__img--te{
+            background-image: url(../media/menu/te.jpg);
+        }
+        .plato__img--jugo{
+            background-image: url(../media/menu/jugo.jpg);
+        }
+        .plato__img--brownie{
+            background-image: url(../media/menu/brownie.jpg);
+        }
+        .plato__img--budin{
+            background-image: url(../media/menu/budin.jpg);
+        }
+        .plato__img--cookie{
+            background-image: url(../media/menu/cookie.jpg);
+        }
+        .plato__img--medialuna{
+            background-image: url(../media/menu/medialuna.jpg);
+        }
+        .plato__img--tostado{
+            background-image: url(../media/menu/tostado.jpg);
+        }
+        .plato__texto{
+            height: 20%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            text-align: center;
+            color: $marron1;
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 300;
+                font-family: "monsterrat", sans-serif;
+            }
+        }
+    }
+    .plato:hover {
+        -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+        -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+        -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+        box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    }
+    .show{
+        display: block;
+    }
+}
+//####   SUCURSALES   ####
+/* ####   BANNER SUCURSALES #### */
+.bannerSucursales{
+    @extend %banner;
+    background-image:$gradiente1, url(../media/cafeMapa.jpg);
+    .bannerSucursales__titulo{
+        @extend %tituloBanner;
+        font-size: 19vh;
+        @media (max-width: 767px){
+            font-size: 15.5vh;
+        }
+    }
+}
+/* ####   LISTA SUCURSALES   #### */
+.grid-sucursales{
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    .sucursal{
+        position: relative;
+        height: 750px;
+        background: #f7f7f7;
+        padding: 2px;
+        .sucursal__img{
+            width: 100%;
+            height: 40%;
+            background-size: cover;
+            background-position: center;
+        }
+        .sucursal__img--martinez{
+            background-image: url(../media/fotoSucursales/martinez.jpg);
+        }
+        .sucursal__img--segundo{
+            background-image: url(../media/fotoSucursales/segundoFernandez.jpg);
+        }
+        .sucursal__img--vicente{
+            background-image: url(../media/fotoSucursales/vicenteLopez.jpg);
+        }
+        .sucursal__img--palermo{
+            background-image: url(../media/fotoSucursales/palermo.jpg);
+        }
+        .sucursal__img--tigre{
+            background-image: url(../media/fotoSucursales/tigre.jpg);
+        }
+        .sucursal__img--sanTelmo{
+            background-image: $gradiente1,  url(../media/fotoSucursales/sanTelmo.jpg);
+        }
+        .sucursal__img--montserrat{
+            background-image: url(../media/fotoSucursales/montserrat.jpg);
+        }
+        .sucursal__img--adrogue{
+            background-image: url(../media/fotoSucursales/adrogue.jpg);
+        }
+        .sucursal__texto{
+            width: 100%;
+            height: 50%;
+            .sucursal__titulo{
+                text-transform: uppercase;
+                @extend %titulo1;
+            }
+            .sucursal__iconos{
+                width: 75px;
+                span{
+                    color: $marron3;
+                    font-size: 40px;
+                    width: 100px;
+                    text-align: center;
+                }
+            }
+            .sucursal__info{
+                font-family: 'montserrat', sans-serif;
+                color: $marron2;
+                font-size: 1.2rem;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+        }
+        .proximamente{
+            position: absolute;
+            color: #fff;
+            width: 70%;
+            text-align: end;
+            font-size: 30px;
+            font-weight: 500;
+            padding-right: 10px;
+            background-color: $rojo;
+        }
+    }
+}
+/* ####   PAGINA SUCURSAL   #### */
+.tienda{
+    width: 100%;
+    .tienda__texto{
+        width: 100%;
+        .tienda__titulo{
+            text-transform: uppercase;
+            @extend %titulo1;
+        }
+        .tienda__icono{
+            width: 75px;
+            span{
+                color: $marron3;
+                font-size: 40px;
+                width: 100px;
+                text-align: center;
+            }
+        }
+        .tienda__info{
+            font-family: 'montserrat', sans-serif;
+            color: $marron2;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+    }
+}
+.tiendaFoto{ /*MANTENER ALTURA FIJA EN MD*/
+@media only  screen and (min-width: 768px) and (max-width: 991px) {
+    width: 100%;
+    overflow: hidden;
+    .img-fluid{
+        width: auto;
+        max-width: none;
+        height: 410px;
+        }
+    } 
+}
+.tiendaFoto--segundo{ /*MANTENER ALTURA FIJA EN MD*/
+    @media only  screen and (min-width: 768px) and (max-width: 991px) {
+        .img-fluid{
+            height: 485px;
+            }
+        } 
+    }
+.tiendaFoto--sanTelmo{
+    .tiendaFoto--sanTelmo__lightbox{
+        width: 100%;
+    }
+    .tiendaFoto--sanTelmo__overlay{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $gradiente2;
+        z-index: 1;
+    }
+    .tiendaFoto--sanTelmo__contenedorTitulo{
+        position: absolute;
+        z-index: 2;
+        .tiendaFoto--sanTelmo__titulo{
+            @extend %tituloBanner;
+            font-size: 14.5vh;
+            font-weight: 500;
+            @media (max-width: 991px) {
+                font-size: 12vh;
+            }
+        }
+    }
+}
+.map{
+    height: 70vh;
+}
+//####   CONTACTO   ####
+/* ####   BANNER CONTACTO #### */
+.bannerContacto{
+    @extend %banner;
+    background-image:$gradiente3, url(../media/cafeBarra.jpg);
+    .bannerContacto__titulo{
+        @extend %tituloBanner;
+        font-size: 19vh;
+    }
+}
+/* ####  FORMUARIO E INFO #### */
+.contacto{
+    @extend %banner;
+    background-image:linear-gradient(rgba(47,23,15,.85),rgba(47,23,15,.85)), url(../media/granos.jpg);
+    height: auto;
+    .card{
+        height: 100%;
+        background-color: rgba(255, 255, 255, .70);
+        .formulario{
+            .formulario__titulo{
+                @extend %titulo1;
+            }
+            .formulario__texto{
+                @extend %textoDescriptivo1;
+            }
+            input, textarea{
+                @extend %textoDescriptivo1;
+                background-color:  rgba(255, 255, 255, .30);
+            }
+            input:focus, textarea:focus{
+                border-color: #cacaca;
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem  rgba(207, 207, 207, 0.7);
+            }
+            select, option{
+                @extend %textoDescriptivo1;
+                color:rgb(73, 80, 87);
+                background-color:  rgba(255, 255, 255, .30);
+            }
+            select:focus{
+                border-color: #cacaca;
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem  rgba(207, 207, 207, 0.7);
+            }
+        }
+        .info{
+            .info__titulo{
+                @extend %titulo1;
+            }
+            .info__subtitulo{
+                @extend %textoDescriptivo1;
+            }
+            .info__icono{
+                width: 75px;
+                span{
+                    color: $marron1;
+                    font-size: 40px;
+                    width: 100px;
+                    text-align: center;
+                }
+            }
+            .info__texto{
+                font-family: 'montserrat', sans-serif;
+                color: $marron1;
+                font-size: 1.4rem;
+                font-weight: 300;
+                margin: 0px 0px 0px 10px;
+            }
+        }
+    }
+}
+// ####   MAPA   ####
+.infoMapContainer{
+    padding: 10px;
+    width: 100%;
+    height: 50vh;
+    iframe{
+        opacity: 50%;
+        border-radius: .25rem;
+        transition: all .5s;
+    }
+    iframe:hover{
+        opacity: 100%;
+        border-radius: .25rem;
+    }
+}
+
