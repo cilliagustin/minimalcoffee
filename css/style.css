@@ -25,7 +25,7 @@ body {
   color: #4d3127;
   font-weight: 700; }
 
-.headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo, .carousel-item .carousel-item__contenedorTexto .carousel-item__texto, .bannerColombia .bannerColombia__titulo, .bannerMenu .bannerMenu__titulo, .bannerSucursales .bannerSucursales__titulo, .tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__contenedorTitulo .tiendaFoto--sanTelmo__titulo, .bannerContacto .bannerContacto__titulo {
+.headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo, .bannerPlanta .bannerPlanta__titulo, .carousel-item .carousel-item__contenedorTexto a .carousel-item__texto, .bannerColombia .bannerColombia__titulo, .bannerMenu .bannerMenu__titulo, .bannerSucursales .bannerSucursales__titulo, .tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__contenedorTitulo .tiendaFoto--sanTelmo__titulo, .bannerContacto .bannerContacto__titulo {
   background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5));
   background-clip: text;
   -webkit-background-clip: text;
@@ -60,6 +60,9 @@ strong.MC {
 /* ####   BANNER   ####   */
 .bannerPlanta, .bannerColombia, .bannerPlantacion, .bannerMenu, .bannerSucursales, .bannerContacto, .contacto {
   height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position-x: center; }
 
@@ -255,13 +258,18 @@ nav a.link-active::after {
   position: relative;
   z-index: 1; }
 
-/* ####   BANNER PLANTA    #### */
+/* ####   PLANTA PARALLAX    #### */
 .bannerPlanta {
-  background-image: url(../media/fotoPlanta.jpg);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../media/fotoPlanta.jpg);
   background-attachment: fixed;
   height: 300px; }
+  .bannerPlanta .bannerPlanta__titulo {
+    font-size: 120px; }
+    @media (max-width: 991px) {
+      .bannerPlanta .bannerPlanta__titulo {
+        font-size: 12vw; } }
 
-/* ####   TEXTOS 1 INDEX   #### */
+/* ####   TEXTOS 2 INDEX   #### */
 .texto2Index .texto2Index__titulo {
   position: relative; }
   .texto2Index .texto2Index__titulo .texto2Index__tituloSuperior {
@@ -290,11 +298,13 @@ nav a.link-active::after {
 .carousel-item .carousel-item__contenedorTexto {
   position: absolute;
   z-index: 1; }
-  @media (max-width: 767px) {
-    .carousel-item .carousel-item__contenedorTexto a {
-      opacity: 75%; } }
-  .carousel-item .carousel-item__contenedorTexto .carousel-item__texto {
-    font-size: 9vw; }
+  .carousel-item .carousel-item__contenedorTexto a {
+    text-decoration: none; }
+    .carousel-item .carousel-item__contenedorTexto a .carousel-item__texto {
+      font-size: 9vw; }
+      @media (min-width: 768px) {
+        .carousel-item .carousel-item__contenedorTexto a .carousel-item__texto {
+          pointer-events: none; } }
 
 /* ####   NOSOTROS #### */
 /* ####   BANNER COLOMBIA #### */
@@ -340,6 +350,9 @@ nav a.link-active::after {
   background-position-x: center;
   min-height: 350px;
   height: auto; }
+  @media (max-width: 992px) {
+    .bannerPlantacion {
+      background-attachment: scroll; } }
   .bannerPlantacion .bannerPlantacion__titulo {
     color: #fff; }
   .bannerPlantacion .bannerPlantacion__texto {
@@ -425,6 +438,9 @@ nav a.link-active::after {
     transition: all .7s;
     display: none; }
     .menu-grid .plato .plato__img {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
       background-position: center;
       margin-bottom: 10px;
@@ -509,6 +525,9 @@ nav a.link-active::after {
     .grid-sucursales .sucursal .sucursal__img {
       width: 100%;
       height: 40%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
       background-position: center; }
     .grid-sucursales .sucursal .sucursal__img--martinez {
