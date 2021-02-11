@@ -2,8 +2,11 @@
 * {
   font-family: 'oswald', sans-serif; }
 
-body {
+html, body {
   overflow-x: hidden; }
+
+body {
+  position: relative; }
 
 /* ####   EFECTOS GENERALES ####   */
 /* ####   TEXTOS Y TITULOS   ####   */
@@ -505,7 +508,7 @@ nav a.link-active::after {
   display: grid;
   gap: 15px;
   padding: 15px;
-  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr)); }
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
   .grid-sucursales .sucursal {
     position: relative;
     height: 750px;
