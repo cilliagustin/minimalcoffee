@@ -21,7 +21,7 @@ body{
     color: $gris;
 }
 %titulo1{
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: $marron1;
     font-weight: 700;
 }
@@ -265,16 +265,10 @@ nav{
         z-index: 2;
         .headerVideo__titulo{
             @extend %tituloBanner;
-            font-size: 20vh;
+            font-size: 150px;
             font-weight: 500;
             @media (max-width: 992px){
-                font-size: 19vh;
-            }
-            @media (max-width: 767px){
-                font-size: 16.5vh;
-            }
-            @media (max-width: 576px){
-                font-size: 14.8vh;
+                font-size: 15vw;
             }
         }
     }
@@ -313,20 +307,21 @@ nav{
 /* ####   TEXTOS 1 INDEX   #### */
 .texto2Index{
     .texto2Index__titulo{
+        position: relative;
         .texto2Index__tituloSuperior{
             color: $marron1;
             font-size: 3.2rem;
             font-weight: 200;
-            line-height: 0%;
             position: relative;
             z-index: 2;
         }
         .texto2Index__tituloInferior{
+            position: absolute;
+            top: 55%;
+            left: -45%;
             color: $marron2;
             font-weight: 700;
-            font-size: 4.6rem;
-            line-height: 40%;
-            position: relative;
+            font-size: 3.1rem;
             z-index: 1;
         }
     }
@@ -334,8 +329,9 @@ nav{
         @extend %textoDescriptivo1;
     }
 }
-/* ####   NOSOTROS #### */
+/* ####   SLIDER   #### */
 .carousel-item{
+
     .carousel-item__overlay {
         position: absolute;
         top: 0;
@@ -346,18 +342,14 @@ nav{
     .carousel-item__contenedorTexto{
         position: absolute;
         z-index: 1;
+        @media (max-width: 767px){
+            a{
+                opacity: 75%;
+            }
+        }
         .carousel-item__texto{
             @extend %tituloBanner;
-            font-size: 16.5vh;
-            @media (max-width: 992px){
-                font-size: 13vh;
-            }
-            @media (max-width: 767px){
-                font-size: 9.1vh;
-            }
-            @media (max-width: 576px){
-                font-size: 8vh;
-            }
+            font-size: 9vw;
         }
     }
 }
@@ -366,15 +358,11 @@ nav{
 .bannerColombia{
     @extend %banner;
     height: 350px;
-    background-attachment: scroll;
     background-image: url(../media/colombia.jpg);
     .bannerColombia__titulo{
         @extend %tituloBanner;
-        font-size: 20vh;
+        font-size: 15vw;
         font-weight: 500;
-        @media (max-width: 767px){
-            font-size: 17vh;
-        }
     }
 }
 /* ####   TEXTOS 1 NOSOTROS   #### */
@@ -395,7 +383,7 @@ nav{
         color: $marron1;
         font-weight: 400;
         @media screen and (max-width: 767px){
-            font-size: 2.5rem;
+            font-size: 2.1rem;
             color: $marron1;
             font-weight: 700;
             text-transform: uppercase;
@@ -421,7 +409,8 @@ nav{
     background-image:$gradiente1, url(../media/plantacion.jpg);
     background-attachment: fixed;
     background-position-x: center;
-    height: 300px;
+    min-height: 350px;
+    height: auto;
     .bannerPlantacion__titulo{
         @extend %titulo1;
         color: #fff;
@@ -435,6 +424,7 @@ nav{
 .texto3Nosotros{
     .texto3Nosotros__titulo{
         @extend %titulo1;
+        font-size: 1.8rem;
         position: relative;
     }
     .texto3Nosotros__parrafo{
@@ -473,11 +463,13 @@ nav{
 /* ####   BANNER MENÚ #### */
 .bannerMenu{
     @extend %banner;
-    height: 400px;
     background-image:$gradiente1, url(../media/cafeMedialuna.jpg);
     .bannerMenu__titulo{
         @extend %tituloBanner;
-        font-size: 18vh;
+        font-size: 150px;
+        @media (max-width: 991px) {
+            font-size: 15vw;
+        }
     }
 }
 /* ####   OPCIONES MENÚ   #### */
@@ -615,9 +607,9 @@ nav{
     background-image:$gradiente1, url(../media/cafeMapa.jpg);
     .bannerSucursales__titulo{
         @extend %tituloBanner;
-        font-size: 19vh;
-        @media (max-width: 767px){
-            font-size: 15.5vh;
+        font-size: 150px;
+        @media (max-width: 991px) {
+            font-size: 15vw;
         }
     }
 }
@@ -626,12 +618,15 @@ nav{
     display: grid;
     gap: 15px;
     padding: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     .sucursal{
         position: relative;
-        height: 750px;
+        height: 870px;
         background: #f7f7f7;
         padding: 2px;
+        @media (max-width: 400px) {
+            height: 850px;
+        }
         .sucursal__img{
             width: 100%;
             height: 40%;
@@ -668,6 +663,7 @@ nav{
             .sucursal__titulo{
                 text-transform: uppercase;
                 @extend %titulo1;
+                font-size: 2rem;
             }
             .sucursal__iconos{
                 width: 75px;
@@ -761,10 +757,13 @@ nav{
         z-index: 2;
         .tiendaFoto--sanTelmo__titulo{
             @extend %tituloBanner;
-            font-size: 14.5vh;
+            font-size: 10vw;
             font-weight: 500;
             @media (max-width: 991px) {
-                font-size: 12vh;
+                font-size: 65px;
+            }
+            @media (max-width: 767px) {
+                font-size: 10vw;
             }
         }
     }
@@ -779,7 +778,10 @@ nav{
     background-image:$gradiente3, url(../media/cafeBarra.jpg);
     .bannerContacto__titulo{
         @extend %tituloBanner;
-        font-size: 19vh;
+        font-size: 150px;
+        @media (max-width: 991px) {
+            font-size: 15vw;
+        }
     }
 }
 /* ####  FORMUARIO E INFO #### */
