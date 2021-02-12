@@ -303,7 +303,11 @@ nav{
 /* ####   PLANTA PARALLAX    #### */
 .bannerPlanta{
     background-image:$gradiente3, url(../media/fotoPlanta.jpg);
-    @extend %banner;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-x: center;
     background-attachment: fixed;
     height: 300px;
     .bannerPlanta__titulo{
