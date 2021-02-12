@@ -309,8 +309,8 @@ nav a.link-active::after {
 /* ####   NOSOTROS #### */
 /* ####   BANNER COLOMBIA #### */
 .bannerColombia {
-  height: 350px;
-  background-image: url(../media/colombia.jpg); }
+  background-image: url(../media/colombia.jpg);
+  height: 350px; }
   .bannerColombia .bannerColombia__titulo {
     font-size: 15vw;
     font-weight: 500; }

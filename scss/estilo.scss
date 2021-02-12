@@ -302,8 +302,8 @@ nav{
 }
 /* ####   PLANTA PARALLAX    #### */
 .bannerPlanta{
-    @extend %banner;
     background-image:$gradiente3, url(../media/fotoPlanta.jpg);
+    @extend %banner;
     background-attachment: fixed;
     height: 300px;
     .bannerPlanta__titulo{
@@ -367,9 +367,9 @@ nav{
 /* ####   NOSOTROS #### */
 /* ####   BANNER COLOMBIA #### */
 .bannerColombia{
+    background-image: url(../media/colombia.jpg);
     @extend %banner;
     height: 350px;
-    background-image: url(../media/colombia.jpg);
     .bannerColombia__titulo{
         @extend %tituloBanner;
         font-size: 15vw;
@@ -416,8 +416,8 @@ nav{
 }
 /* #### BANNER PLANTACION #### */
 .bannerPlantacion{
-    @extend %banner;
     background-image:$gradiente1, url(../media/plantacion.jpg);
+    @extend %banner;
     background-attachment: fixed;
     background-position-x: center;
     min-height: 350px;
@@ -476,8 +476,8 @@ nav{
 /* ####   MENÚ #### */
 /* ####   BANNER MENÚ #### */
 .bannerMenu{
-    @extend %banner;
     background-image:$gradiente1, url(../media/cafeMedialuna.jpg);
+    @extend %banner;
     .bannerMenu__titulo{
         @extend %tituloBanner;
         font-size: 150px;
@@ -620,8 +620,8 @@ nav{
 //####   SUCURSALES   ####
 /* ####   BANNER SUCURSALES #### */
 .bannerSucursales{
-    @extend %banner;
     background-image:$gradiente1, url(../media/cafeMapa.jpg);
+    @extend %banner;
     .bannerSucursales__titulo{
         @extend %tituloBanner;
         font-size: 150px;
@@ -794,8 +794,8 @@ nav{
 //####   CONTACTO   ####
 /* ####   BANNER CONTACTO #### */
 .bannerContacto{
-    @extend %banner;
     background-image:$gradiente3, url(../media/cafeBarra.jpg);
+    @extend %banner;
     .bannerContacto__titulo{
         @extend %tituloBanner;
         font-size: 150px;
@@ -806,8 +806,8 @@ nav{
 }
 /* ####  FORMUARIO E INFO #### */
 .contacto{
-    @extend %banner;
     background-image:linear-gradient(rgba(47,23,15,.85),rgba(47,23,15,.85)), url(../media/granos.jpg);
+    @extend %banner;
     height: auto;
     .card{
         height: 100%;
