@@ -2,11 +2,14 @@
 *{
     font-family: 'oswald', sans-serif;
 }
-html, body{
-    overflow-x: hidden;
-}
-body{
-    position: relative;
+// html, body{
+//     overflow-x: hidden;
+// }
+// body{
+//     position: relative;
+// }
+body.modal-open{
+    padding-right: 0px!important;
 }
 /* ####   EFECTOS GENERALES ####   */
 /* ####   TEXTOS Y TITULOS   ####   */
@@ -124,6 +127,38 @@ nav{
         height: 2px;
         background:$rojo;
     }
+    .navbar-toggler{
+        background-color: transparent;
+        border:none;
+        width: 40px;
+        height: 30px;
+        padding: 0;
+        text-align: center;
+        .navbar-toggler__line{
+            width: 22px;
+            background-color: $marron2!important;
+            height: 3px;
+            margin: 5px auto;
+            transition: all .7s;
+        }
+    }
+    .navbar-toggler[aria-expanded="true"]{
+        .navbar-toggler__line--1{
+            transform:translate(0px, 10px) rotate(225deg);
+            width: 27px;
+        }
+        .navbar-toggler__line--2{
+            opacity: 0;
+            transform: rotate(-225deg);
+        }
+        .navbar-toggler__line--3{
+            transform:translate(0px, -6px) rotate(-225deg);
+            width: 27px;
+        }
+    }
+    .navbar-toggler:hover{
+        background-color: transparent;
+    }
 }
 /* ####   FOOTER   #### */
 .footer{
@@ -135,16 +170,26 @@ nav{
     }
     .footer__subtitulo{
         font-family: 'monsterrat', sans-serif;
-        font-size: 1.2rem;
-        letter-spacing: 3.1px;
+        font-size: 1.1rem;
+        letter-spacing: 3px;
         color: $negroTranslucido;
-        font-weight: 100;
+        font-weight: 200;
         line-height: 1px;
     }
-    .footer__texto{
-        font-size: 1.4rem;
+    .footer__quote{
+        font-style: italic;
+        font-family: 'monsterrat', sans-serif;
+        text-align: left;
+        font-size: 1.1rem;
         color: $negroTranslucido;
         font-weight: 400;
+        .footer__quote--author{
+            display: block;
+            font-style: normal;
+            text-align: right;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
     }
     .footer__links{
         ul{
@@ -231,8 +276,33 @@ nav{
             }
         }
     }
-    
-
+    .footer__contenedor-firma{
+        padding-top: 20px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));;
+        .footer__firma{
+            font-family: 'monsterrat', sans-serif;
+            font-size: 1.6rem;
+            color: $negroTranslucido;
+            font-weight: 400;
+            a{
+                color: $negroTranslucido;
+                text-decoration: none;
+                font-weight: 700;
+                color: $negroTranslucido;
+                overflow: hidden;
+                background: linear-gradient(to right, rgb(255, 255, 255), rgb(219, 219, 219) 50%, $negroTranslucido 50%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-size: 200% 100%;
+                background-position: 100%;
+                transition: all .5s ease-in;
+            }
+            a:hover {
+                background-position: 0 100%;
+            }
+        }
+    }
 }
 /* ####   INDEX   #### */
 /* ####   HEADER VIDEO   #### */
@@ -492,6 +562,38 @@ nav{
 }
 /* ####   OPCIONES MENÚ   #### */
 #opciones-menu{
+    .navbar-toggler{
+        background-color: transparent;
+        border:none;
+        width: 60px;
+        height: 45px;
+        padding: 0;
+        text-align: center;
+        .navbar-toggler__line{
+            width: 40px;
+            background-color: $marron2!important;
+            height: 4px;
+            margin: 9px auto;
+            transition: transform .7s;
+        }
+    }
+    .navbar-toggler[aria-expanded="true"]{
+        .navbar-toggler__line--1{
+            transform:translate(0px, 9px) rotate(225deg);
+            width: 50px;
+        }
+        .navbar-toggler__line--2{
+            opacity: 0;
+            transform: rotate(-225deg);
+        }
+        .navbar-toggler__line--3{
+            transform:translate(0px, -17px) rotate(-225deg);
+            width: 50px;
+        }
+    }
+    .navbar-toggler:hover{
+        background-color: transparent;
+    }
     .opciones-menu__button{
         text-transform: uppercase;
         text-decoration: none;
@@ -726,6 +828,9 @@ nav{
         .tienda__titulo{
             text-transform: uppercase;
             @extend %titulo1;
+            @media screen and (max-width: 767px){
+                text-align: center;
+            }
         }
         .tienda__icono{
             width: 75px;
