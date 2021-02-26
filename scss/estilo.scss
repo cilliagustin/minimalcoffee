@@ -159,14 +159,14 @@ nav{
     background-color: $marron1;
     .footer__titulo{
         font-size: 2rem;
-        color: $negroTranslucido;
+        color: $blancoTranslucido2;
         font-weight: 700;
     }
     .footer__subtitulo{
         font-family: 'monsterrat', sans-serif;
         font-size: 1.1rem;
         letter-spacing: 3px;
-        color: $negroTranslucido;
+        color: $blancoTranslucido2;
         font-weight: 200;
         line-height: 1px;
     }
@@ -175,7 +175,7 @@ nav{
         font-family: 'monsterrat', sans-serif;
         text-align: left;
         font-size: 1.1rem;
-        color: $negroTranslucido;
+        color: $blancoTranslucido2;
         font-weight: 400;
         .footer__quote--author{
             display: block;
@@ -200,7 +200,7 @@ nav{
                     text-decoration: none;
                     font-size: 1.1rem;
                     margin-right: 10px;
-                    color: $negroTranslucido;
+                    color: $blancoTranslucido2;
                 }
                 a:hover{
                     text-decoration: line-through;
@@ -223,12 +223,12 @@ nav{
                     text-decoration: none;
                     .fab{
                         font-size: 50px;
-                        color: $negroTranslucido;
+                        color: $blancoTranslucido2;
                         transition: .7s ease-out;
                     }
                     .fab:hover{
                         font-size: 50px;
-                        color: $negroTranslucido;
+                        color: $blancoTranslucido2;
                         color: rgba(0, 0, 0, 0.1);
                     }
                 }
@@ -276,15 +276,15 @@ nav{
         .footer__firma{
             font-family: 'monsterrat', sans-serif;
             font-size: 1.6rem;
-            color: $negroTranslucido;
+            color: $blancoTranslucido2;
             font-weight: 400;
             a{
-                color: $negroTranslucido;
+                color: $blancoTranslucido2;
                 text-decoration: none;
                 font-weight: 700;
-                color: $negroTranslucido;
+                color: $blancoTranslucido2;
                 overflow: hidden;
-                background: linear-gradient(to right, rgb(255, 255, 255), rgb(219, 219, 219) 50%, $negroTranslucido 50%);
+                background: linear-gradient(to right, rgb(247, 93, 93), rgb(247, 93, 93) 50%, $blancoTranslucido2 50%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
