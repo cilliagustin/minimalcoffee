@@ -225,11 +225,17 @@ nav{
                         font-size: 50px;
                         color: $blancoTranslucido2;
                         transition: .7s ease-out;
+                        @media only screen and (max-width: 991px){
+                            opacity: 0;
+                            }
                     }
                     .fab:hover{
                         font-size: 50px;
                         color: $blancoTranslucido2;
                         color: rgba(0, 0, 0, 0.1);
+                        @media only screen and (max-width: 991px){
+                            opacity: 0;
+                            }
                     }
                 }
                 
@@ -244,7 +250,10 @@ nav{
                 height: 0%;
                 overflow: hidden;
                 transition: .7s ease-out;
-                height: 0%
+                height: 0%;
+                @media only screen and (max-width: 991px){
+                    height: 130%
+                    }
             }
             .twitter::before{
                 content:'\f099';
@@ -334,7 +343,7 @@ nav{
             @extend %tituloBanner;
             font-size: 150px;
             font-weight: 500;
-            @media (max-width: 992px){
+            @media (max-width: 991px){
                 font-size: 15vw;
             }
         }
@@ -489,7 +498,7 @@ nav{
     background-position-x: center;
     min-height: 350px;
     height: auto;
-    @media (max-width: 992px){
+    @media (max-width: 991px){
         background-attachment: scroll;
     }
     .bannerPlantacion__titulo{

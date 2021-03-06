@@ -206,10 +206,16 @@ nav .navbar-toggler:hover {
           font-size: 50px;
           color: rgba(255, 255, 255, 0.75);
           transition: .7s ease-out; }
+          @media only screen and (max-width: 991px) {
+            .footer .footer__iconos ul li a .fab {
+              opacity: 0; } }
         .footer .footer__iconos ul li a .fab:hover {
           font-size: 50px;
           color: rgba(255, 255, 255, 0.75);
           color: rgba(0, 0, 0, 0.1); }
+          @media only screen and (max-width: 991px) {
+            .footer .footer__iconos ul li a .fab:hover {
+              opacity: 0; } }
     .footer .footer__iconos ul li::before {
       font-family: fontAwesome;
       pointer-events: none;
@@ -221,6 +227,9 @@ nav .navbar-toggler:hover {
       overflow: hidden;
       transition: .7s ease-out;
       height: 0%; }
+      @media only screen and (max-width: 991px) {
+        .footer .footer__iconos ul li::before {
+          height: 130%; } }
     .footer .footer__iconos ul .twitter::before {
       content: '\f099';
       color: #1DA1F2; }
@@ -295,7 +304,7 @@ nav .navbar-toggler:hover {
     .headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo {
       font-size: 150px;
       font-weight: 500; }
-      @media (max-width: 992px) {
+      @media (max-width: 991px) {
         .headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo {
           font-size: 15vw; } }
 
@@ -414,7 +423,7 @@ nav .navbar-toggler:hover {
   background-position-x: center;
   min-height: 350px;
   height: auto; }
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     .bannerPlantacion {
       background-attachment: scroll; } }
   .bannerPlantacion .bannerPlantacion__titulo {
