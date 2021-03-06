@@ -423,8 +423,6 @@ nav{
     .carousel-item__contenedorTexto{
         position: absolute;
         z-index: 1;
-        a{
-            text-decoration: none;
             .carousel-item__texto{
                 @extend %tituloBanner;
                 font-size: 9vw;
@@ -432,8 +430,6 @@ nav{
                     pointer-events: none;
                 }
             }
-            
-        }
     }
 }
 /* ####   NOSOTROS #### */
@@ -441,7 +437,6 @@ nav{
 .bannerColombia{
     background-image: url(../media/colombia.jpg);
     @extend %banner;
-    height: 350px;
     .bannerColombia__titulo{
         @extend %tituloBanner;
         font-size: 15vw;

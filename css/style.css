@@ -22,7 +22,7 @@ body.modal-open {
   color: #4d3127;
   font-weight: 700; }
 
-.headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo, .bannerPlanta .bannerPlanta__titulo, .carousel-item .carousel-item__contenedorTexto a .carousel-item__texto, .bannerColombia .bannerColombia__titulo, .bannerMenu .bannerMenu__titulo, .bannerSucursales .bannerSucursales__titulo, .tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__contenedorTitulo .tiendaFoto--sanTelmo__titulo, .bannerContacto .bannerContacto__titulo {
+.headerVideo .headerVideo__contenedorTitulo .headerVideo__titulo, .bannerPlanta .bannerPlanta__titulo, .carousel-item .carousel-item__contenedorTexto .carousel-item__texto, .bannerColombia .bannerColombia__titulo, .bannerMenu .bannerMenu__titulo, .bannerSucursales .bannerSucursales__titulo, .tiendaFoto--sanTelmo .tiendaFoto--sanTelmo__contenedorTitulo .tiendaFoto--sanTelmo__titulo, .bannerContacto .bannerContacto__titulo {
   background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5));
   background-clip: text;
   -webkit-background-clip: text;
@@ -365,19 +365,16 @@ nav .navbar-toggler:hover {
 .carousel-item .carousel-item__contenedorTexto {
   position: absolute;
   z-index: 1; }
-  .carousel-item .carousel-item__contenedorTexto a {
-    text-decoration: none; }
-    .carousel-item .carousel-item__contenedorTexto a .carousel-item__texto {
-      font-size: 9vw; }
-      @media (min-width: 768px) {
-        .carousel-item .carousel-item__contenedorTexto a .carousel-item__texto {
-          pointer-events: none; } }
+  .carousel-item .carousel-item__contenedorTexto .carousel-item__texto {
+    font-size: 9vw; }
+    @media (min-width: 768px) {
+      .carousel-item .carousel-item__contenedorTexto .carousel-item__texto {
+        pointer-events: none; } }
 
 /* ####   NOSOTROS #### */
 /* ####   BANNER COLOMBIA #### */
 .bannerColombia {
-  background-image: url(../media/colombia.jpg);
-  height: 350px; }
+  background-image: url(../media/colombia.jpg); }
   .bannerColombia .bannerColombia__titulo {
     font-size: 15vw;
     font-weight: 500; }
